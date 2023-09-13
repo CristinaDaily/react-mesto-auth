@@ -5,7 +5,6 @@ import * as auth from '../utils/Auth';
 function Register({ onRegister }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
-  //const [message, setMessage] = React.useSate('');
 
   const navigate = useNavigate();
 
