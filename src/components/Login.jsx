@@ -13,8 +13,6 @@ function Login({ onLogin }) {
     onLogin({ email, password }).catch((err) =>
       console.log(`Login error:${err}`)
     );
-    setEmail('');
-    setPassword('');
   }
   return (
     <div className='login'>

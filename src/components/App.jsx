@@ -38,14 +38,16 @@ function App() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    api
-      .getAppInfo()
-      .then(([cardsData, userData]) => {
-        setCards(cardsData);
-        setCurrentUser(userData);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (loggedIn) {
+      api
+        .getAppInfo()
+        .then(([cardsData, userData]) => {
+          setCards(cardsData);
+          setCurrentUser(userData);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [loggedIn]);
 
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(!isEditProfilePopupOpen);
@@ -60,7 +62,7 @@ function App() {
   }
 
   function handleRegistration() {
-    setisInfoToolPopupOpen(!isInfoToolPopupOpen);
+    setisInfoToolPopupOpen(true);
   }
 
   function closeAllPopups() {
@@ -159,9 +161,6 @@ function App() {
     return auth
       .register(password, email)
       .then((res) => {
-        if (!res || res.status === 400) {
-          throw new Error('Something went wrong with registration');
-        }
         setIsRegistrationSuccessful(true);
         handleRegistration();
         return res;
@@ -177,10 +176,12 @@ function App() {
     return auth
       .getContent(jwt)
       .then((res) => {
-        if (res.statusCode === 401) throw new Error('Unauthorized user');
         return res;
       })
-      .catch((error) => console.log(`Error during token check:${error} `));
+      .catch((error) => {
+        console.log(`Error during token check:${error} `);
+        throw error;
+      });
   }
 
   React.useEffect(() => {
@@ -220,7 +221,9 @@ function App() {
       })
       .then((res) => {
         if (res.token) {
+          setUserData({ email: email });
           setLoggedIn(true);
+          navigate('/');
         }
       })
       .catch((err) => {
@@ -273,6 +276,8 @@ function App() {
             isOpen={isInfoToolPopupOpen}
             onClose={closeAllPopups}
             isSuccessful={isRegistrationSuccessful}
+            successRegMsg='Вы успешно зарегистрировались!'
+            errorRegMsg='Что-то пошло не так! Попробуйте ещё раз.'
           />
           <EditProfilePopup
             isOpen={isEditProfilePopupOpen}

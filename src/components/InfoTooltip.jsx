@@ -3,7 +3,13 @@ import React from 'react';
 import success from '../images/success.svg';
 import fail from '../images/fail.svg';
 
-function InfoTooltip({ isOpen, onClose, isSuccessful }) {
+function InfoTooltip({
+  isOpen,
+  onClose,
+  isSuccessful,
+  successRegMsg,
+  errorRegMsg,
+}) {
   return (
     <div className={`popup popup_type_info ${isOpen ? 'popup_opened' : ''}`}>
       <div className='popup__container'>
@@ -20,9 +26,7 @@ function InfoTooltip({ isOpen, onClose, isSuccessful }) {
             className='popup__icon'
           ></img>
           <h2 className='popup__message'>
-            {isSuccessful
-              ? 'Вы успешно зарегистрировались!'
-              : 'Что-то пошло не так! Попробуйте ещё раз.'}
+            {isSuccessful ? successRegMsg : errorRegMsg}
           </h2>
         </div>
       </div>
