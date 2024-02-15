@@ -14,5 +14,5 @@ This application allows users to register, log in, upload, delete, like protos, 
 - integration with API: all data are stored on it (sign-in and sign out, update profile data,add cards and delete the only users' ones,like / dislike photos.)
 
 # Running the Project
-Copy this project repository and run it with commands ```npm i`````` and ```npm start```
+Copy this project repository and run it with commands ```npm i``` and ```npm start```
 
