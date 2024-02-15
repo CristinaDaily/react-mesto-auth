@@ -19,7 +19,7 @@ function Register({ onRegister }) {
 
   return (
     <div className='login'>
-      <h2 className='login__title'>Регистрация</h2>
+      <h2 className='login__title'>Sign Up</h2>
       <form className='login__form' onSubmit={hendleSubmit}>
         <input
           required
@@ -37,20 +37,20 @@ function Register({ onRegister }) {
           id='password-register'
           name='register-password'
           type='password'
-          placeholder='Пароль'
+          placeholder='Password'
           className='login__input login__input_type_password'
           value={password}
           onChange={({ target }) => setPassword(target.value)}
         />
         <span className='login__error'></span>
         <button type='submit' className='login__button'>
-          Зарегистрироваться
+          Sign Up
         </button>
       </form>
       <div className='login__signin'>
-        <p className='login__login-question'>Уже зарегистрированы?</p>
+        <p className='login__login-question'>Already have an account?</p>
         <Link to='/sign-in' className='login__login-link button '>
-          Войти
+          Sign in
         </Link>
       </div>
     </div>

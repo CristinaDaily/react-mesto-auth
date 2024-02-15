@@ -34,16 +34,16 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   return (
     <PopupWithForm
       name='profile'
-      title='Редактировать профиль'
+      title='Edit profile'
       isOpen={isOpen}
       onClose={onClose}
-      buttonText='Сохранить'
+      buttonText='Save'
       onSubmit={handleSubmit}
     >
       <input
         type='text'
         name='name'
-        placeholder='Имя'
+        placeholder='Name'
         className='popup__input popup__input_type_name'
         id='name-input'
         required
@@ -56,7 +56,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       <input
         type='text'
         name='about'
-        placeholder='o себе'
+        placeholder='personal description'
         className='popup__input popup__input_type_about'
         id='about-input'
         required

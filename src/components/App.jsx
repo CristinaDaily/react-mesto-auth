@@ -237,8 +237,6 @@ function App() {
       setLoggedIn(false);
       navigate('/sign-in');
     
-  
-
   }
 
   return (

@@ -17,8 +17,8 @@ function ConfirmCardDeletePopup({
       isOpen={isOpen}
       onClose={onClose}
       name='confirm'
-      title='Вы уверены?'
-      buttonText='Да'
+      title='Are you sure?'
+      buttonText='Yes'
       onSubmit={handleSubmit}
     ></PopupWithForm>
   );

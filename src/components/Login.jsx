@@ -34,14 +34,14 @@ function Login({ onLogin }) {
           id='password'
           name='password'
           type='password'
-          placeholder='Пароль'
+          placeholder='Password'
           className='login__input login__input_type_password'
           value={password}
           onChange={({ target }) => setPassword(target.value)}
         />
         <span className='login__error'></span>
         <button type='submit' className='login__button'>
-          Войти
+          Log In
         </button>
       </form>
     </div>

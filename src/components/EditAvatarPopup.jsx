@@ -21,16 +21,16 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   return (
     <PopupWithForm
       name='avatar'
-      title='Обновить аватар'
+      title='Edit profile picture'
       isOpen={isOpen}
       onClose={onClose}
-      buttonText='Сохранить'
+      buttonText='Save'
       onSubmit={handleSubmit}
     >
       <input
         type='url'
         name='link'
-        placeholder='Ссылка на аватар'
+        placeholder='Picture link'
         className='popup__input popup__input_type_link'
         id='avatar-input'
         required

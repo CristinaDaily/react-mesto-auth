@@ -10,7 +10,7 @@ function Header({ userData, onSingnOut }) {
 
   return (
     <header className='header'>
-      <img src={logo} alt='Лого' className='header__logo' />
+      <img src={logo} alt='Logo' className='header__logo' />
       <div className='header__container'>
         {location.pathname === '/' && (
           <div className='header__user-email'>{userData.email}</div>
@@ -22,18 +22,18 @@ function Header({ userData, onSingnOut }) {
                 className='header__link button header__button'
                 onClick={onSingnOut}
               >
-                Выйти
+                Sign Out
               </button>
             </>
           )}
           {location.pathname === '/sign-up' && (
             <Link className='header__link button ' to='/sign-in'>
-              Войти
+              Log In
             </Link>
           )}
           {location.pathname === '/sign-in' && (
             <Link className='header__link button ' to='/sign-up'>
-              Регистрация
+              Sign Up
             </Link>
           )}
         </nav>
