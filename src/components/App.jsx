@@ -206,7 +206,7 @@ function App() {
     if (loggedIn) {
       navigate('/');
     }
-  }, [loggedIn]);
+  }, [loggedIn, navigate]);
 
   function handleLogin({ password, email }) {
     return auth
@@ -232,11 +232,20 @@ function App() {
       });
   }
 
+  function signOut(){
+      token.removeToken();
+      setLoggedIn(false);
+      navigate('/sign-in');
+    
+  
+
+  }
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className='body'>
         <div className='page'>
-          <Header userData={userData} />
+          <Header userData={userData} onSingnOut={signOut} />
           <Routes>
             <Route
               path='/'

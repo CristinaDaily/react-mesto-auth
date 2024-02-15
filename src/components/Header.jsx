@@ -3,14 +3,10 @@ import logo from '../images/header-logo.svg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import * as token from '../utils/token.js';
 
-function Header({ userData }) {
+function Header({ userData, onSingnOut }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  function signOut() {
-    token.removeToken();
-    navigate('/sign-in');
-  }
 
   return (
     <header className='header'>
@@ -24,7 +20,7 @@ function Header({ userData }) {
             <>
               <button
                 className='header__link button header__button'
-                onClick={signOut}
+                onClick={onSingnOut}
               >
                 Выйти
               </button>

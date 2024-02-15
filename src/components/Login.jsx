@@ -16,7 +16,7 @@ function Login({ onLogin }) {
   }
   return (
     <div className='login'>
-      <h2 className='login__title'>Войти</h2>
+      <h2 className='login__title'>Log In</h2>
       <form className='login__form' onSubmit={handleSubmit}>
         <input
           required

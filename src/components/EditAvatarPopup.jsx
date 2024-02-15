@@ -4,7 +4,7 @@ import PopupWithForm from './PopupWithForm';
 function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const avatarLinkRef = React.useRef(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!isOpen) {
       avatarLinkRef.current.value = '';
     }
