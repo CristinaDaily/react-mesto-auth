@@ -21,6 +21,7 @@
     "predeploy" : "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://cristinadaily.github.io/react-mesto-auth",
   "eslintConfig": {
     "extends": [
       "react-app",
