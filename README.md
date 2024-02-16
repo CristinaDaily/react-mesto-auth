@@ -11,9 +11,9 @@ This application allows users to register, log in, upload, delete, like protos, 
 
 # What was done: 
 - developed interactive page;
-- user registration and authentication
-- implemented functionality to modify user information, add and remove likes, and delete uploaded photos
-- integration with API: all data are stored on it (sign-in and sign out, update profile data,add cards and delete the only users' ones,like / dislike photos.)
+- user registration and authentication;
+- implemented functionality to modify user information, add and remove likes, and delete uploaded photos;
+- integration with API: all data are stored on it (sign-in and sign out, update profile data,add cards and delete the only users' ones,like / dislike photos).
 
 # Running the Project
 Copy this project repository and run it with commands ```npm i``` and ```npm start```
