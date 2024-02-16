@@ -1,6 +1,7 @@
  # Photo desk on React
 
 **Link to project on GitHub Pages**: https://cristinadaily.github.io/react-mesto-auth/
+To log in, you can register with your email or use the following credentials: ```account1@gmail.com``` and password ```account1```.
 
 This application allows users to register, log in, upload, delete, like protos, adit account information. This is my first React app, which I developed for learning purposes.
 
