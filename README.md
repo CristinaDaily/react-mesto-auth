@@ -18,3 +18,6 @@ This application allows users to register, log in, upload, delete, like protos, 
 # Running the Project
 Copy this project repository and run it with commands ```npm i``` and ```npm start```
 
+
+https://github.com/CristinaDaily/react-mesto-auth/assets/120998918/c16b8ad7-67e3-4528-b6de-a57fe7011930
+
